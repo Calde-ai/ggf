@@ -149,5 +149,20 @@ setInterval(() => {
 
 // Carica i dati dal localStorage quando la pagina viene caricata
 window.onload = function() {
-    caricaDati();
+    caricaDati(); // Carica i dati salvati nel localStorage
+
+    // Associa eventi click solo dopo il caricamento completo della pagina
+    const addPunteggioBtns = document.querySelectorAll('.addPunteggio');
+    addPunteggioBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const input = this.previousElementSibling;
+        const punteggio = parseInt(input.value);
+        if (!isNaN(punteggio) && punteggio >= -5 && punteggio <= 5) {
+          const idAttivita = this.getAttribute('data-id');
+          aggiornaPunteggio(punteggio);
+          aggiungiAttivitaCompletata(idAttivita, punteggio);
+          input.value = ''; // Resetta l'input dopo aver aggiunto
+        }
+      });
+    });
 };
