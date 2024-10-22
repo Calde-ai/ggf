@@ -1,0 +1,136 @@
+/* Impostazioni generali per il tema scuro */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c; /* Grigio scuro tendente al nero */
+  color: #ffd700; /* Giallo */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+  color: #ffd700; /* Giallo */
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav button {
+  background-color: #333;
+  color: #ffd700;
+  border: 1px solid #ffd700;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #444;
+}
+
+/* Stili per le pagine */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+h2 {
+  color: #ffd700;
+}
+
+.dashboard-info p,
+.obiettivi p,
+.ricompense p {
+  margin: 10px 0;
+}
+
+.obiettivi {
+  margin-top: 20px;
+}
+
+.ricompense {
+  margin-top: 20px;
+}
+
+.ricompense h3 {
+  margin-top: 20px;
+  color: #ffd700;
+}
+
+/* Stili per le attività */
+.attivita {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.attivita label {
+  flex: 1;
+  text-align: left;
+  color: #ffd700;
+}
+
+.attivita input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ffd700;
+  border-radius: 5px;
+  background-color: #444;
+  color: #ffd700;
+}
+
+.addPunteggio {
+  background-color: #333;
+  color: #ffd700;
+  border: 1px solid #ffd700;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.addPunteggio:hover {
+  background-color: #444;
+}
+
+/* Stili per la lista delle attività completate */
+#listaAttivitaCompletate {
+  list-style-type: none;
+  padding: 0;
+}
+
+#listaAttivitaCompletate li {
+  background-color: #333;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffd700;
+}
+
+.deleteBtn {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background-color: #ff4d4d;
+}
