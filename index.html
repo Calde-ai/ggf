@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamification della Vita</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Collegamento al file CSS -->
+</head>
+<body>
+  <div class="container">
+    <h1>Gamification della Vita</h1>
+    <nav>
+      <button id="dashboardBtn">Dashboard</button>
+      <button id="segnaAttivitaBtn">Segna Attività</button>
+      <button id="attivitaCompletateBtn">Attività Completate</button>
+    </nav>
+
+    <!-- Sezione Dashboard -->
+    <section id="dashboard" class="page active">
+      <h2>Dashboard</h2>
+      <div class="dashboard-info">
+        <p>Livello Attuale: <span id="livelloAttuale">1</span></p>
+        <p>Punteggio Totale: <span id="punteggioTotale">0</span></p>
+        <p>Punteggio Mensile: <span id="punteggioMensile">0</span></p>
+        <p>Punteggio Giornaliero: <span id="punteggioGiornaliero">0</span></p>
+      </div>
+      <div class="obiettivi">
+        <h3>Obiettivi del Livello</h3>
+        <p>Obiettivo: <span id="prossimoObiettivo">380</span> punti</p>
+        <p>Task Business: Creare un piano di business dettagliato</p>
+        <p>Task Cura Personale: Stabilire una routine di sonno regolare</p>
+        <p>Task Relazioni: Pianificare una serata speciale con la tua ragazza</p>
+      </div>
+      <div class="ricompense">
+        <h3>Ricompense</h3>
+        <p>Ricompensa Attuale: <span id="ricompensaAttuale">Nessuna</span></p>
+        <p>Prossima Ricompensa: <span id="prossimaRicompensa">bubble the (50 punti)</span></p>
+      </div>
+    </section>
+
+    <!-- Sezione per Segnare le Attività -->
+    <section id="segnaAttivita" class="page">
+      <h2>Segna Attività</h2>
+      <div id="routine">
+        <div class="attivita">
+          <label for="punteggioSveglia">5:30 - 6:00 Sveglia, bere un bicchiere d’acqua, stretching o yoga</label>
+          <input type="number" id="punteggioSveglia" min="-5" max="5">
+          <button class="addPunteggio" data-id="sveglia">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioColazione">6:00 - 6:30 Colazione sana</label>
+          <input type="number" id="punteggioColazione" min="-5" max="5">
+          <button class="addPunteggio" data-id="colazione">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioCane">6:30 - 7:00 Leggere o portare in giro il cane</label>
+          <input type="number" id="punteggioCane" min="-5" max="5">
+          <button class="addPunteggio" data-id="cane">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioEsercizio">7:00 - 7:45 Esercizio fisico (cardio e pesi)</label>
+          <input type="number" id="punteggioEsercizio" min="-5" max="5">
+          <button class="addPunteggio" data-id="esercizio">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioDoccia">7:45 - 8:00 Doccia fredda e meditazione</label>
+          <input type="number" id="punteggioDoccia" min="-5" max="5">
+          <button class="addPunteggio" data-id="doccia">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioAnalisi">8:00 - 8:30 Analisi del mercato in pre-apertura sessione</label>
+          <input type="number" id="punteggioAnalisi" min="-5" max="5">
+          <button class="addPunteggio" data-id="analisi">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioPreparazione">8:30 - 9:00 Preparazione per la giornata</label>
+          <input type="number" id="punteggioPreparazione" min="-5" max="5">
+          <button class="addPunteggio" data-id="preparazione">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioLavoro">9:00 - 13:00 Lavoro intenso (trading e altre attività imprenditoriali)</label>
+          <input type="number" id="punteggioLavoro" min="-5" max="5">
+          <button class="addPunteggio" data-id="lavoro">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioPausaPranzo">13:00 - 13:30 Pausa pranzo</label>
+          <input type="number" id="punteggioPausaPranzo" min="-5" max="5">
+          <button class="addPunteggio" data-id="pausaPranzo">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioLavoro2">13:30 - 14:00 Continuazione del lavoro (trading, analisi, gestione del business)</label>
+          <input type="number" id="punteggioLavoro2" min="-5" max="5">
+          <button class="addPunteggio" data-id="lavoro2">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioPausaBreve">14:00 - 14:15 Pausa breve</label>
+          <input type="number" id="punteggioPausaBreve" min="-5" max="5">
+          <button class="addPunteggio" data-id="pausaBreve">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioLavoro3">14:15 - 17:00 Continuazione del lavoro (trading, analisi, gestione del business)</label>
+          <input type="number" id="punteggioLavoro3" min="-5" max="5">
+          <button class="addPunteggio" data-id="lavoro3">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioCasa">17:00 - 18:00 Tempo dedicato alla casa e ai doveri domestici</label>
+          <input type="number" id="punteggioCasa" min="-5" max="5">
+          <button class="addPunteggio" data-id="casa">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioQualita">18:00 - 19:00 Tempo di qualità con la tua ragazza</label>
+          <input type="number" id="punteggioQualita" min="-5" max="5">
+          <button class="addPunteggio" data-id="qualita">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioCena">19:00 - 19:30 Cena leggera</label>
+          <input type="number" id="punteggioCena" min="-5" max="5">
+          <button class="addPunteggio" data-id="cena">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioRelax">19:30 - 20:30 Attività rilassanti (lettura, musica, passeggiata)</label>
+          <input type="number" id="punteggioRelax" min="-5" max="5">
+          <button class="addPunteggio" data-id="relax">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioNotte">20:30 - 21:00 Routine notturna (spegnere gli schermi, riflessione, diario)</label>
+          <input type="number" id="punteggioNotte" min="-5" max="5">
+          <button class="addPunteggio" data-id="notte">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioPianificazione">21:00 - 22:00 Pianificazione della giornata</label>
+          <input type="number" id="punteggioPianificazione" min="-5" max="5">
+          <button class="addPunteggio" data-id="pianificazione">Aggiungi Punteggio</button>
+        </div>
+        <div class="attivita">
+          <label for="punteggioLetto">23:00 Andare a letto</label>
+          <input type="number" id="punteggioLetto" min="-5" max="5">
+          <button class="addPunteggio" data-id="letto">Aggiungi Punteggio</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sezione delle Attività Completate -->
+    <section id="attivitaCompletate" class="page">
+      <h2>Attività Completate</h2>
+      <ul id="listaAttivitaCompletate">
+        <!-- Qui compariranno le attività completate -->
+      </ul>
+    </section>
+  </div>
+
+  <!-- Collegamento al file JS -->
+  <script src="script.js"></script>
+</body>
+</html>
